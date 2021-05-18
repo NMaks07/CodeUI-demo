@@ -10,10 +10,21 @@ import PinLayout
 
 class HarderVC: UIViewController {
 
-    let msgList = [Message(phone: "+7 965 407 00 39", text: "Привет, увидел ваше объявление на Авито... ", time: "15:30", isPhoneCheked: true),
-                   Message(phone: "+7 988 350 22 16", text: "Это Пётр, у нас для вас предложение", time: "15:31", isPhoneCheked: true),
-                   Message(phone: "+7 965 300 00 30", text: "Зашёл на ваш сайт, интересует прайс", time: "15:312", isPhoneCheked: false)
-    ]
+    //spisok uslovno podelen na dvoe, budet imitatsiya na soobscheniya segodnyashnie i vcherashnie
+    let msgList =
+        [
+            [
+                Message(phone: "+7 965 407 00 39", text: "Привет, увидел ваше объявление на Авито... ", time: "15:30", isPhoneCheked: true),
+                Message(phone: "+7 988 350 22 16", text: "Это Пётр, у нас для вас предложение", time: "15:31", isPhoneCheked: true),
+            ],
+            [
+                Message(phone: "+7 965 300 00 30", text: "Зашёл на ваш сайт, интересует прайс", time: "15:32", isPhoneCheked: false),
+                Message(phone: "+7 988 350 22 16", text: "Это Пётр, у нас для вас предложение", time: "15:33", isPhoneCheked: true),
+                Message(phone: "+7 965 300 00 30", text: "Зашёл на ваш сайт, интересует прайс", time: "15:34", isPhoneCheked: false)
+
+            ]
+        ]
+
     
     let gl: CAGradientLayer = {
         let l = CAGradientLayer()
@@ -26,6 +37,7 @@ class HarderVC: UIViewController {
         
         return l
     }()
+    
     let upperView: UIView = {
     
         let v = UIView()
@@ -34,9 +46,9 @@ class HarderVC: UIViewController {
     }()
     
     let table: UITableView = {
-        let tbl = UITableView()
+        let tbl = UITableView(frame: CGRect.zero, style: .grouped)
         
-        tbl.backgroundColor = UIColor.lightGray
+        tbl.backgroundColor = UIColor.clear
         return tbl
     }()
     
@@ -152,41 +164,39 @@ class HarderVC: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.tableFooterView = UIView()
-        table.estimatedRowHeight = 10
         table.reloadData()
         
-        // Do any additional setup after loading the view.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension HarderVC: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return msgList.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return msgList[section].count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = DataTableViewCell()
-        cell.set(msg: msgList[indexPath.row])
-        print("cell set")
+        let cell = DataTableViewCell(style: .default, reuseIdentifier: nil)
+        cell.set(msg: msgList[indexPath.section][indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // The UITableView will call the cell's sizeThatFit() method to compute the height.
         // WANRING: You must also set the UITableView.estimatedRowHeight for this to work.
-        return UITableView.automaticDimension
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Cегодня"
+        } else {
+            return "Вчера"
+        }
     }
 }
 

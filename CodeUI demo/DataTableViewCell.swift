@@ -21,12 +21,13 @@ class DataTableViewCell: UITableViewCell {
         // (identical to box height)
 
         //l.attributedText = NSMutableAttributedString(string: "+7 965 407 00 39", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-        
+        l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
     let checkedImg: UIImageView = {
         let img = UIImageView()
+        img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
     
@@ -36,6 +37,7 @@ class DataTableViewCell: UITableViewCell {
         lbl.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.09
+        lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
     
@@ -47,23 +49,36 @@ class DataTableViewCell: UITableViewCell {
         lb.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.09
-        
+        lb.translatesAutoresizingMaskIntoConstraints = false
         return lb
     }()
     
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .default, reuseIdentifier: nil)
         contentView.addSubview(phoneNum)
         contentView.addSubview(checkedImg)
         contentView.addSubview(timeLbl)
         contentView.addSubview(msgLbl)
-        // Initialization code
+        
+        self.selectionStyle = .none
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        contentView.addSubview(phoneNum)
+//        contentView.addSubview(checkedImg)
+//        contentView.addSubview(timeLbl)
+//        contentView.addSubview(msgLbl)
+//        // Initialization code
+//    }
 
     func set(msg: Message){
-        self.phoneNum.text = msg.text
+        self.phoneNum.text = msg.phoneNumber
         
         if msg.isPhoneCheked {
             checkedImg.image = UIImage(named: "chekedActive")
@@ -77,13 +92,13 @@ class DataTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("layoutcell rabotaet")
+        //print("layoutcell rabotaet")
         phoneNum.pin.left(16).top(24).sizeToFit()
-        checkedImg.pin.top(24).after(of: phoneNum).margin(4).size(12)
+        checkedImg.pin.after(of: phoneNum).margin(4).size(12).centerLeft(to: phoneNum.anchor.centerRight)
         
-        timeLbl.pin.topRight().sizeToFit()
+        timeLbl.pin.top(24).right(16).sizeToFit()
         
-        msgLbl.pin.left().below(of: phoneNum).sizeToFit()
+        msgLbl.pin.left(16).below(of: phoneNum).margin(7).sizeToFit().bottom(23)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
