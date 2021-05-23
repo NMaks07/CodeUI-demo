@@ -12,7 +12,6 @@
 		A82BB60126494B8B0020C5B2 /* TTInterfaces-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A82BB5B726494B8A0020C5B2 /* TTInterfaces-Medium.ttf */; };
 		A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BAED62648F85100A7E9A1 /* AppDelegate.swift */; };
 		A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BAED82648F85100A7E9A1 /* SceneDelegate.swift */; };
-		A89BAEDB2648F85100A7E9A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BAEDA2648F85100A7E9A1 /* ViewController.swift */; };
 		A89BAEE02648F85700A7E9A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */; };
 		A89BAEE32648F85700A7E9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89BAEE12648F85700A7E9A1 /* LaunchScreen.storyboard */; };
 		A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D86D77264A8AC10032B296 /* HarderVC.swift */; };
@@ -28,7 +27,6 @@
 		A89BAED32648F85100A7E9A1 /* CodeUI demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeUI demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89BAED62648F85100A7E9A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A89BAED82648F85100A7E9A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A89BAEDA2648F85100A7E9A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A89BAEE22648F85700A7E9A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A89BAEE42648F85700A7E9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,16 +97,31 @@
 				A82BB56E26494B8A0020C5B2 /* font */,
 				A89BAED62648F85100A7E9A1 /* AppDelegate.swift */,
 				A89BAED82648F85100A7E9A1 /* SceneDelegate.swift */,
-				A89BAEDA2648F85100A7E9A1 /* ViewController.swift */,
-				A82BB568264906120020C5B2 /* RegistrationVC.swift */,
-				A8D86D77264A8AC10032B296 /* HarderVC.swift */,
+				A8CF7C3B265AC69C006DC0BD /* ViewControllers */,
 				A8D86D7D264BDE440032B296 /* DataTableViewCell.swift */,
-				A8D86D80264BE3CD0032B296 /* Message.swift */,
+				A8CF7C3D265AC6D3006DC0BD /* Models */,
 				A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */,
 				A89BAEE12648F85700A7E9A1 /* LaunchScreen.storyboard */,
 				A89BAEE42648F85700A7E9A1 /* Info.plist */,
 			);
 			path = "CodeUI demo";
+			sourceTree = "<group>";
+		};
+		A8CF7C3B265AC69C006DC0BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A82BB568264906120020C5B2 /* RegistrationVC.swift */,
+				A8D86D77264A8AC10032B296 /* HarderVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8CF7C3D265AC6D3006DC0BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8D86D80264BE3CD0032B296 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A89BAEDB2648F85100A7E9A1 /* ViewController.swift in Sources */,
 				A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */,
 				A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */,
 				A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */,
@@ -378,10 +390,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maksumov.CodeUI-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maksumov.CodeUI-demo-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,10 +410,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maksumov.CodeUI-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maksumov.CodeUI-demo-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
