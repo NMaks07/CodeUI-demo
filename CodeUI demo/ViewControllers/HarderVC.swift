@@ -26,6 +26,7 @@ class HarderVC: UIViewController {
         ]
 
     
+    //Gradient layer
     let gl: CAGradientLayer = {
         let l = CAGradientLayer()
         l.colors = [

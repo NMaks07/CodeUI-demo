@@ -14,6 +14,7 @@
 		A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BAED82648F85100A7E9A1 /* SceneDelegate.swift */; };
 		A89BAEE02648F85700A7E9A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */; };
 		A89BAEE32648F85700A7E9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89BAEE12648F85700A7E9A1 /* LaunchScreen.storyboard */; };
+		A8CF7C44265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */; };
 		A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D86D77264A8AC10032B296 /* HarderVC.swift */; };
 		A8D86D7E264BDE440032B296 /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D86D7D264BDE440032B296 /* DataTableViewCell.swift */; };
 		A8D86D81264BE3CD0032B296 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D86D80264BE3CD0032B296 /* Message.swift */; };
@@ -30,6 +31,7 @@
 		A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A89BAEE22648F85700A7E9A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A89BAEE42648F85700A7E9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberVerifiedConfirmVC.swift; sourceTree = "<group>"; };
 		A8D86D77264A8AC10032B296 /* HarderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarderVC.swift; sourceTree = "<group>"; };
 		A8D86D7D264BDE440032B296 /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		A8D86D80264BE3CD0032B296 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				A82BB568264906120020C5B2 /* RegistrationVC.swift */,
 				A8D86D77264A8AC10032B296 /* HarderVC.swift */,
+				A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */,
+				A8CF7C44265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift in Sources */,
 				A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */,
 				A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */,
 				A8D86D81264BE3CD0032B296 /* Message.swift in Sources */,

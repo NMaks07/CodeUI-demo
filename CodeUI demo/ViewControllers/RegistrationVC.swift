@@ -211,9 +211,7 @@ class RegistrationVC: UIViewController {
 
     }
 
-    @objc func okBtnPressed(){
-        print("NAJAL")
-        
+    fileprivate func showMainTabController() {
         let vc1 = HarderVC(); vc1.view.backgroundColor = .white
         let vc2 = UIViewController(); vc2.view.backgroundColor = .yellow
         let vc3 = UIViewController(); vc3.view.backgroundColor = .orange
@@ -247,6 +245,18 @@ class RegistrationVC: UIViewController {
         
         tabbar.tabBar.tintColor = UIColor.darkGray
         present(tabbar, animated: true, completion: nil)
+    }
+    
+    fileprivate func showNumberVerifiedVC(){
+        let vc = NumberVerifiedConfirmVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
+    @objc func okBtnPressed(){
+
+        showNumberVerifiedVC()
+        //showMainTabController()
     }
     /*
     // MARK: - Navigation
