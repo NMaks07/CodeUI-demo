@@ -56,6 +56,7 @@ class RegistrationVC: UIViewController {
         return view
     }()
 
+    
     let stepLbl: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -69,21 +70,11 @@ class RegistrationVC: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
-    //snizu teper' delayu elementy
-    let okBtn: UIButton = {
-        let btn = UIButton()
-        btn.backgroundColor = UIColor.white
-        btn.layer.cornerRadius = 10
-        //btn.layer.borderWidth = 1
-        //btn.layer.borderColor = UIColor.black.cgColor
-        btn.setTitle("Продолжить", for: .normal)
-        btn.setTitleColor(UIColor.black, for: .normal)
-        btn.layer.shadowColor = UIColor.gray.cgColor
-        btn.layer.shadowOpacity = 0.3
-        btn.layer.shadowRadius = 21
-        btn.layer.shadowOffset = CGSize(width: 0, height: 5)
-        btn.translatesAutoresizingMaskIntoConstraints = false
+    
+    
+    let okBtn: NMButton = {
+        let btn = NMButton()
+        btn.customStyle = .waiting
         return btn
     }()
     
@@ -112,6 +103,7 @@ class RegistrationVC: UIViewController {
         return line
     }()
     
+    /*
     let informLbl: UILabel = {
         let view = UILabel()
         view.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -124,19 +116,17 @@ class RegistrationVC: UIViewController {
         
         return view
     }()
-
-    let smsCodeFld: UITextField = {
-        let fld = UITextField()
-        fld.layer.cornerRadius = 5
-        fld.layer.borderWidth = 2
-        fld.layer.borderColor = UIColor(red: 0, green: 0.1, blue: 1, alpha: 1).cgColor
-        fld.backgroundColor = UIColor(red: 0, green: 0.1, blue: 1, alpha: 0.1)
-        fld.translatesAutoresizingMaskIntoConstraints = false
-        let rightLbl = UILabel()
-        rightLbl.text = "✔︎  "
-        rightLbl.pin.sizeToFit()
-        fld.rightView = rightLbl
-        fld.rightViewMode = .whileEditing
+    */
+    
+    let informLbl: NMLabel = {
+        let view = NMLabel()
+        view.customStyle = .errorStyle(text: "Отлично! Нажмите кнопку Продолжить")
+        return view
+    }()
+    
+    let smsCodeFld: NMTextField = {
+        let fld = NMTextField()
+        fld.customStyle = .okStyle
         return fld
     }()
     
@@ -258,14 +248,9 @@ class RegistrationVC: UIViewController {
         showNumberVerifiedVC()
         //showMainTabController()
     }
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
