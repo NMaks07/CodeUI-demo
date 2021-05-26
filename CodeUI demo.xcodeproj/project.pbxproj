@@ -16,7 +16,6 @@
 		A89BAEE32648F85700A7E9A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A89BAEE12648F85700A7E9A1 /* LaunchScreen.storyboard */; };
 		A8CF7C44265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */; };
 		A8D720F6265E16A600B0378D /* NMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D720F5265E16A600B0378D /* NMTextField.swift */; };
-		A8D720F9265E803B00B0378D /* ChekedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D720F8265E803B00B0378D /* ChekedView.swift */; };
 		A8D720FC265EA42500B0378D /* NMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D720FB265EA42500B0378D /* NMButton.swift */; };
 		A8D720FF265EBABC00B0378D /* NMLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D720FE265EBABC00B0378D /* NMLabel.swift */; };
 		A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D86D77264A8AC10032B296 /* HarderVC.swift */; };
@@ -37,7 +36,6 @@
 		A89BAEE42648F85700A7E9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberVerifiedConfirmVC.swift; sourceTree = "<group>"; };
 		A8D720F5265E16A600B0378D /* NMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMTextField.swift; sourceTree = "<group>"; };
-		A8D720F8265E803B00B0378D /* ChekedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChekedView.swift; sourceTree = "<group>"; };
 		A8D720FB265EA42500B0378D /* NMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMButton.swift; sourceTree = "<group>"; };
 		A8D720FE265EBABC00B0378D /* NMLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMLabel.swift; sourceTree = "<group>"; };
 		A8D86D77264A8AC10032B296 /* HarderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarderVC.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				A8D720F5265E16A600B0378D /* NMTextField.swift */,
 				A8D720FB265EA42500B0378D /* NMButton.swift */,
 				A8D720FE265EBABC00B0378D /* NMLabel.swift */,
-				A8D720F8265E803B00B0378D /* ChekedView.swift */,
 				A8CF7C3D265AC6D3006DC0BD /* Models */,
 				A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */,
 				A89BAEE12648F85700A7E9A1 /* LaunchScreen.storyboard */,
@@ -255,7 +252,6 @@
 			files = (
 				A8D720F6265E16A600B0378D /* NMTextField.swift in Sources */,
 				A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */,
-				A8D720F9265E803B00B0378D /* ChekedView.swift in Sources */,
 				A8CF7C44265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift in Sources */,
 				A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */,
 				A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */,
