@@ -74,7 +74,7 @@ class RegistrationVC: UIViewController {
     
     let okBtn: NMButton = {
         let btn = NMButton()
-        btn.customStyle = .waiting
+        btn.customStyle = .active
         return btn
     }()
     
@@ -204,7 +204,7 @@ class RegistrationVC: UIViewController {
     fileprivate func showMainTabController() {
         let vc1 = HarderVC(); vc1.view.backgroundColor = .white
         let vc2 = UIViewController(); vc2.view.backgroundColor = .yellow
-        let vc3 = UIViewController(); vc3.view.backgroundColor = .orange
+        let vc3 = DialogVC(); vc3.view.backgroundColor = .white
         
         let images = [
             UIImage(named: "tb1"),
@@ -245,8 +245,8 @@ class RegistrationVC: UIViewController {
     
     @objc func okBtnPressed(){
 
-        showNumberVerifiedVC()
-        //showMainTabController()
+        //showNumberVerifiedVC()
+        showMainTabController()
     }
     
     // MARK: - Navigation

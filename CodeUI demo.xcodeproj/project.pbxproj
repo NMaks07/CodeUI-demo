@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D60637603BE1EFEAE82E96A /* Pods_CodeUI_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 697204C0379E7EEF6185BDC5 /* Pods_CodeUI_demo.framework */; };
+		A801A7232660152600D895D0 /* NMRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801A7222660152600D895D0 /* NMRoundButton.swift */; };
+		A801A72626601A1B00D895D0 /* DialogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A801A72526601A1B00D895D0 /* DialogVC.swift */; };
 		A82BB569264906120020C5B2 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82BB568264906120020C5B2 /* RegistrationVC.swift */; };
 		A82BB60126494B8B0020C5B2 /* TTInterfaces-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A82BB5B726494B8A0020C5B2 /* TTInterfaces-Medium.ttf */; };
 		A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BAED62648F85100A7E9A1 /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		697204C0379E7EEF6185BDC5 /* Pods_CodeUI_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeUI_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BF2308ED5348E05B96F77C /* Pods-CodeUI demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeUI demo.release.xcconfig"; path = "Target Support Files/Pods-CodeUI demo/Pods-CodeUI demo.release.xcconfig"; sourceTree = "<group>"; };
+		A801A7222660152600D895D0 /* NMRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMRoundButton.swift; sourceTree = "<group>"; };
+		A801A72526601A1B00D895D0 /* DialogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogVC.swift; sourceTree = "<group>"; };
 		A82BB568264906120020C5B2 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		A82BB5B726494B8A0020C5B2 /* TTInterfaces-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTInterfaces-Medium.ttf"; sourceTree = "<group>"; };
 		A89BAED32648F85100A7E9A1 /* CodeUI demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeUI demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +113,7 @@
 				A8D86D7D264BDE440032B296 /* DataTableViewCell.swift */,
 				A8D720F5265E16A600B0378D /* NMTextField.swift */,
 				A8D720FB265EA42500B0378D /* NMButton.swift */,
+				A801A7222660152600D895D0 /* NMRoundButton.swift */,
 				A8D720FE265EBABC00B0378D /* NMLabel.swift */,
 				A8CF7C3D265AC6D3006DC0BD /* Models */,
 				A89BAEDF2648F85700A7E9A1 /* Assets.xcassets */,
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				A82BB568264906120020C5B2 /* RegistrationVC.swift */,
+				A801A72526601A1B00D895D0 /* DialogVC.swift */,
 				A8D86D77264A8AC10032B296 /* HarderVC.swift */,
 				A8CF7C43265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift */,
 			);
@@ -252,6 +258,8 @@
 			files = (
 				A8D720F6265E16A600B0378D /* NMTextField.swift in Sources */,
 				A89BAED72648F85100A7E9A1 /* AppDelegate.swift in Sources */,
+				A801A72626601A1B00D895D0 /* DialogVC.swift in Sources */,
+				A801A7232660152600D895D0 /* NMRoundButton.swift in Sources */,
 				A8CF7C44265ACC64006DC0BD /* NumberVerifiedConfirmVC.swift in Sources */,
 				A89BAED92648F85100A7E9A1 /* SceneDelegate.swift in Sources */,
 				A8D86D78264A8AC10032B296 /* HarderVC.swift in Sources */,
